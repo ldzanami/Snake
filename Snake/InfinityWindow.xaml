@@ -1,0 +1,46 @@
+﻿<Window x:Class="Snake.InfinityWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="InfinityWindow"
+        WindowStartupLocation="CenterScreen"
+ResizeMode="NoResize"
+WindowStyle="None"
+SizeToContent="WidthAndHeight" 
+ContentRendered="Window_ContentRendered" Background="Black" KeyUp="Window_KeyUp">
+    <Window.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border Background="Gray" BorderThickness="3" CornerRadius="10"
+            TextBlock.Foreground="White" TextBlock.FontSize="16" TextBlock.TextAlignment="Center">
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Border Background="PaleGreen" Width="900" Height="900" CornerRadius="20">
+        <Grid Height="850" Background="PaleGreen">
+            <Canvas x:Name="CanvasMap" Background="PaleGreen" ClipToBounds="True" Width="800" Height="800" Margin="0,41,0,0">
+                <Border Background="WhiteSmoke" BorderBrush="WhiteSmoke" BorderThickness="2"  Width="350" Height="350" Canvas.Left="225" Canvas.Top="225" Name="bdrWelcomeMessage" CornerRadius="20" Panel.ZIndex="1">
+                    <StackPanel Width="320" Height="300" Orientation="Vertical" Background="WhiteSmoke">
+                        <TextBlock FontWeight="Light" Foreground="#2214c4" FontSize="40" HorizontalAlignment="Center" Margin="0,20,0,0">Infinity</TextBlock>
+                        <TextBlock Foreground="#8205a8" TextWrapping="Wrap" Margin="20" FontSize="17" FontFamily="Calibri Light" HorizontalAlignment="Center" VerticalAlignment="Center">Для управления змейкой используйте стрелки или wasd! Цель разрастись на весь экран. Удачи!</TextBlock>
+                        <TextBlock FontWeight="Light" HorizontalAlignment="Center" FontSize="20">Чтобы начать, нажмите R!</TextBlock>
+                        <Button Template="{StaticResource ButtonTemplate}" FontFamily="Calibri Light" Width="150" Height="30" Margin="30" Name="btnBack" Click="btnBack_Click" ClickMode="Press" HorizontalAlignment="Center" Padding="40, 4">Back to menu</Button>
+                    </StackPanel>
+                </Border>
+                <Border CornerRadius="20" Background="WhiteSmoke"  BorderBrush="WhiteSmoke" BorderThickness="2" Width="800" Height="400" Canvas.Left="0" Canvas.Top="250" Name="bdrEndOfGame" Panel.ZIndex="1" Visibility="Collapsed">
+                    <StackPanel Width="500" Orientation="Vertical" Background="WhiteSmoke">
+                        <TextBlock HorizontalAlignment="Center" FontSize="70" FontWeight="Bold" Foreground="DarkRed">YOU DIED</TextBlock>
+                        <TextBlock Margin="20" TextAlignment="Center" FontSize="24">Your score:</TextBlock>
+                        <TextBlock Name="tbFinalScore" TextAlignment="Center" FontSize="48" FontWeight="Bold" Foreground="Maroon">0</TextBlock>
+                        <TextBlock TextAlignment="Center" FontSize="24" Margin="20">Чтобы начать новую игру, нажмите R!</TextBlock>
+                        <Button Template="{StaticResource ButtonTemplate}" Width="150" Height="30" Margin="20" Name="btnBackDeath" Click="btnBack_Click" ClickMode="Press" HorizontalAlignment="Center" Padding="40, 4">Back to menu</Button>
+                    </StackPanel>
+                </Border>
+            </Canvas>
+            <TextBlock x:Name="Score" TextWrapping="Wrap" Background="PaleGreen" Text="Score: 0" FontFamily="Calibri Light" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Top" Height="46"/>
+        </Grid>
+    </Border>
+</Window>

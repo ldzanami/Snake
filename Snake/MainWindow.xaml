@@ -1,0 +1,57 @@
+﻿<Window x:Class="Snake.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="Snake"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        Background="Black"
+        ResizeMode="NoResize"
+        WindowStyle="None">
+    <Window.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border Background="WhiteSmoke" BorderBrush="#F7A5A1" BorderThickness="3" CornerRadius="10">
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid>
+        <Border Width="500" Height="750" VerticalAlignment="Center" HorizontalAlignment="Center" CornerRadius="20">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Offset="0" Color="#82ABCF"/>
+                        <GradientStop Offset="1" Color="#D83151"/>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border Width="255" Height="75" Background="#25a14e" Name="ChangeBorder" CornerRadius="10" Margin="425,212,425,790" Visibility="Collapsed"></Border>
+        <Border Width="255" Height="75" Background="#25a14e" Name="SurBorder" CornerRadius="10" Margin="425,322,425,685" Visibility="Collapsed"></Border>
+        <Border Width="255" Height="75" Background="#25a14e" Name="ComBorder" CornerRadius="10" Margin="425,428,425,579" Visibility="Collapsed"></Border>
+        <Border Width="255" Height="75" Background="#25a14e" Name="InfBorder" CornerRadius="10" Margin="425,544,425,463" Visibility="Collapsed"></Border>
+        <Border Width="255" Height="75" Background="#25a14e" Name="LeadBorder" CornerRadius="10" Margin="425,666,425,341" Visibility="Collapsed"></Border>
+        <Border Width="255" Height="75" Background="#25a14e" Name="ExBorder" CornerRadius="10" Margin="425,794,425,213" Visibility="Collapsed"></Border>
+        <Button Template="{StaticResource ButtonTemplate}" FontFamily="Calibri Light" Visibility="Visible" x:Name="btnLogin" Width="250" Height="70" Click="btnLogin_Click" Margin="425,212,425,790">
+            <TextBlock FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#1010e0" Background="WhiteSmoke">Change account</TextBlock>
+        </Button>
+        <Button FontFamily="Calibri Light" Template="{StaticResource ButtonTemplate}" Visibility="Visible" x:Name="btnLeaders" Width="250" Height="70" Margin="425,666,425,341" Click="btnLeaders_Click">
+            <TextBlock FontFamily="Calibri" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#17e3e3" Background="WhiteSmoke">Leaderboard</TextBlock>
+        </Button>
+        <Button Template="{StaticResource ButtonTemplate}" Visibility="Visible" Name="btnSur" Width="250" Height="70" Margin="425,322,425,685" Click="Survival" FontFamily="Calibri Light">
+            <TextBlock FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#cf0404" Background="WhiteSmoke">Survival</TextBlock>
+        </Button>
+        <Button FontFamily="Calibri Light" Template="{StaticResource ButtonTemplate}" Visibility="Visible" Name="btnCom" Width="250" Height="70" Margin="425,428,425,579" Click="Common">
+            <TextBlock FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#25a14e" Background="WhiteSmoke">Common</TextBlock>
+        </Button>
+        <Button FontFamily="Calibri Light" Template="{StaticResource ButtonTemplate}" Visibility="Visible" Name="btnInf" Width="250" Height="70" Margin="425,544,425,463" Click="Infinity">
+            <TextBlock FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#8205a8" Background="WhiteSmoke">Infinity</TextBlock>
+        </Button>
+        <Button Template="{StaticResource ButtonTemplate}" FontFamily="Calibri Light" Visibility="Visible" Name="btnExit" Width="250" Height="70" Click="Button_Click" Margin="425,794,425,213">
+            <TextBlock FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Background="WhiteSmoke">Exit</TextBlock>
+        </Button>
+    </Grid>
+</Window>

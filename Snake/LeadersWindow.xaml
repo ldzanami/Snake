@@ -1,0 +1,177 @@
+﻿<Window x:Class="Snake.LeadersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake"
+        mc:Ignorable="d"
+        Title="LeadersWindow"
+    WindowStartupLocation="CenterScreen"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    SizeToContent="WidthAndHeight" Background="Black" KeyDown="Window_KeyDown" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border Background="Black" BorderBrush="#F7A5A1" CornerRadius="10">
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Border Width="900" Height="500" CornerRadius="20">
+        <Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0" Color="#ffec70"/>
+                <GradientStop Offset="1" Color="#ffdd00"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,5,828,455">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Rank</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,50,828,410">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">1</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,95,828,365">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">2</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,140,828,320">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">3</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,185,828,275">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">4</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,230,828,230">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">5</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,275,828,185">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">6</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,320,828,140">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">7</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="65" Height="40" BorderBrush="Black" CornerRadius="10" Margin="7,365,828,95">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">8</TextBlock>
+            </Border>
+
+
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,5,623,455">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,50,623,410">
+                <TextBlock Name="SurName1" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,95,623,365">
+                <TextBlock Name="SurName2" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,140,623,320">
+                <TextBlock Name="SurName3" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,185,623,275">
+                <TextBlock Name="SurName4" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,230,623,230">
+                <TextBlock Name="SurName5" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,275,623,185">
+                <TextBlock Name="SurName6" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,320,623,140">
+                <TextBlock Name="SurName7" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="77,365,623,95">
+                <TextBlock Name="SurName8" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+
+
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,5,418,455">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Survival Record</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,50,418,410">
+                <TextBlock Name="Surrec1" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,95,418,365">
+                <TextBlock Name="Surrec2" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,140,418,320">
+                <TextBlock Name="Surrec3" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,185,418,275">
+                <TextBlock Name="Surrec4" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,230,418,230">
+                <TextBlock Name="Surrec5" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,275,418,185">
+                <TextBlock Name="Surrec6" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,320,418,140">
+                <TextBlock Name="Surrec7" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="282,365,418,95">
+                <TextBlock Name="Surrec8" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+
+
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,5,8,455">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Infinity Record</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,50,8,410">
+                <TextBlock Name="Infrec1" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,95,8,365">
+                <TextBlock Name="Infrec2" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,140,8,320">
+                <TextBlock Name="Infrec3" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,185,8,275">
+                <TextBlock Name="Infrec4" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,230,8,230">
+                <TextBlock Name="Infrec5" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,275,8,185">
+                <TextBlock Name="Infrec6" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,320,8,140">
+                <TextBlock Name="Infrec7" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="692,365,8,95">
+                <TextBlock Name="Infrec8" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">0</TextBlock>
+            </Border>
+            
+
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,5,213,455">
+                <TextBlock Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,50,213,410">
+                <TextBlock Name="InfName1" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,95,213,365">
+                <TextBlock Name="InfName2" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,140,213,320">
+                <TextBlock Name="InfName3" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,185,213,275">
+                <TextBlock Name="InfName4" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,230,213,230">
+                <TextBlock Name="InfName5" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,275,213,185">
+                <TextBlock Name="InfName6" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,320,213,140">
+                <TextBlock Name="InfName7" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Border BorderThickness="3" Width="200" Height="40" BorderBrush="Black" CornerRadius="10" Margin="487,365,213,95">
+                <TextBlock Name="InfName8" Foreground="Black" FontFamily="Calibri Light" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center">None</TextBlock>
+            </Border>
+            <Button Name="btnBack" Template="{StaticResource ButtonTemplate}" Width="200" Height="40" Margin="0,420,0,0" Click="btnBack_Click">
+                <TextBlock FontFamily="Calibri Light" FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#17e3e3">Back to menu</TextBlock>
+            </Button>
+
+        </Grid>
+    </Border>
+</Window>
